@@ -72,7 +72,7 @@ form.onsubmit = (e) => {
                 const [res_user] = res.data
 
                 if (res_user) {
-                    alert('user finded!');
+                    alert('user found!');
                     localStorage.setItem("user", JSON.stringify(res.data))
                     location.assign('/')
                     return

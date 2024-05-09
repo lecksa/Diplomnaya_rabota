@@ -62,18 +62,18 @@ form.onsubmit = (e) => {
                 const [res_user] = res.data
 
                 if (res_user) {
-                    alert('user finded!');
+                    alert('user found!');
                     localStorage.setItem("user", JSON.stringify(res.data))
                     location.assign('/')
                     return
                 } else {
                     postData('/users', user)
-                        .then(res => {
-                            if (res.status === 200 || res.status === 201) {
-                                localStorage.setItem("user", JSON.stringify(res.data))
-                                location.assign('/')
-                            }
-                        })
+                    .then(res => {
+                        if (res.status === 200 || res.status === 201) {
+                            localStorage.setItem("user", JSON.stringify(res.data))
+                            location.assign('/')
+                        }
+                    })
                 }
                 dialog.close()
 
