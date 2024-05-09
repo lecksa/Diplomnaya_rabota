@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../media/media.css">
+</head>
+
+<body>
+  <dialog data-modal>
+    <div class="wrap">
+      <div class="close">
+        <img src="../../public/close.png" alt="">
+      </div>
+      <form name="ph_num">
+        <h1>Введите свое имя</h1>
+        <p>Войти в аккаунт, либо зарегистрироваться</p>
+        <div class="number">
+          <input type="text" placeholder="Ваше имя" required>
+        </div>
+        <button>Войти</button>
+      </form>
+      <div class="author">
+        <p>Авторизуясь, вы соглашаетесь <a href="https://legal.uzum.uz/privacy-policy.html">c политикой обработки
+            персональных данных</a></p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog data-modal class="categ">
+    <h1>Категории товаров</h1>
+    <ul class="category_ul"></ul>
+    <div class="cancel">Отмена</div>
+  </dialog>
+
+  <div class="finded_pr">
+    <h1>Поиск</h1>
+    <ul class="finded_ul"></ul>
+  </div>
+
+  <div class="main">
+
+    <div class="small">
+      <div class="fir">
+          <div class="download">
+              <img src="../../public/logo_uzum.png" alt="">
+              <h1>UZUM MARKET</h1>
+          </div>
+          <button>
+            <a href="https://apps.apple.com/us/app/uzum-market-my-app-for-shop/id1640483056?mt=8">Скачать</a>
+          </button>
+      </div>
+      <div class="sec">
+          <form name="small_ver">
+              <input type="text" placeholder="Искать товары и категории">
+              <div class="search_icon">
+                  <img src="../../public/search.svg" alt="">
+              </div>
+          </form>
+      </div>
+  </div>
+    <div class="favourites">
+      <div class="bottom_line">
+        <h1>Мои желания</h1>
+      </div>
+      <div class="prod_tovari my_fav_prods">
+        <div class="tovari my_favs"></div>
+      </div>
+      <div class="nothing">
+        <img src="../../public/hearts 1.svg" alt="">
+        <h1>Добавьте то, что понравилось</h1>
+        <p>Нажмите на ♡ в товаре. Войдите в аккаунт и всё избранное сохранится</p>
+        <button>Войти в аккаунт</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./media/media.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <title>Main page</title>
+</head>
+
+<body>
+
+  <dialog data-modal>
+    <div class="wrap">
+      <div class="close">
+        <img src="../../public/close.png" alt="">
+      </div>
+      <form name="ph_num">
+        <h1>Введите свое имя</h1>
+        <p>Войти в аккаунт, либо зарегистрироваться</p>
+        <input type="text" placeholder="Ваше имя" name="name" required>
+        <input type="text" placeholder="Ваша фамилия" name="surname" required>
+        <button>Войти</button>
+      </form>
+      <div class="author">
+        <p>Авторизуясь, вы соглашаетесь <a href="https://legal.uzum.uz/privacy-policy.html">c политикой обработки
+            персональных данных</a></p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog data-modal class="categ">
+    <h1>Категории товаров</h1>
+    <ul class="category_ul"></ul>
+    <div class="cancel">Отмена</div>
+  </dialog>
+
+  <div class="finded_pr">
+    <h1>Поиск</h1>
+    <ul class="finded_ul"></ul>
+  </div>
+
+  <div class="main">
+
+    <div class="small">
+      <div class="fir">
+          <div class="download">
+              <img src="../../public/logo_uzum.png" alt="">
+              <h1>UZUM MARKET</h1>
+          </div>
+          <button>
+            <a href="https://apps.apple.com/us/app/uzum-market-my-app-for-shop/id1640483056?mt=8">Скачать</a>
+          </button>      </div>
+      <div class="sec">
+          <form name="small_ver">
+              <input type="text" placeholder="Искать товары и категории">
+              <div class="search_icon">
+                  <img src="../../public/search.svg" alt="">
+              </div>
+          </form>
+      </div>
+  </div>
+
+    <div style="margin-top: 20px;  border-radius: 15px;width: 1240px; height: 410px;" class="swiper mySwiper separate">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide one">
+          <img src="./public/slide_1.jpg" alt="">
+        </div>
+        <div class="swiper-slide two">
+          <img src="./public/slide_2.jpg" alt="">
+        </div>
+        <div class="swiper-slide three">
+          <img src="./public/slide_3.jpg" alt="">
+        </div>
+        <div class="swiper-slide four">
+          <img src="./public/slide_4.jpg" alt="">
+        </div>
+        <div class="swiper-slide five">
+          <img src="./public/slide_7.jpg" alt="">
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="products">
+      <div class="prod_tovari gaming">
+        <h1>Для геймеров</h1>
+        <div class="tovari pc_prods"></div>
+        <button class="more">Показать ещё 10</button>
+      </div>
+
+      <div class="prod_tovari audio">
+        <h1>Аудио</h1>
+        <div class="tovari aud_prods"></div>
+      </div>
+
+      <div class="prod_tovari tv">
+        <h1>Телевизоры</h1>
+        <div class="tovari tv_prods"></div>
+      </div>
+
+      <div class="prod_tovari furniture">
+        <h1>Утварь для дома</h1>
+        <div class="tovari fur_prods"></div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="links">
+        <div class="item_link">
+          <h3>О нас</h3>
+          <a href="">Пункт выдачи</a>
+          <a href="">Вакансии</a>
+        </div>
+        <div class="item_link">
+          <h3>Пользователям</h3>
+          <a href="">Связаться снами</a>
+          <a href="">Вопрос-Ответ</a>
+        </div>
+        <div class="item_link">
+          <h3>Для предпринимателей</h3>
+          <a href="">Продавайте на Uzum</a>
+          <a href="">Вход для продавцов</a>
+        </div>
+        <div class="item_link">
+          <h3>Скачать приложение</h3>
+          <div class="downloads">
+            <a
+              href="https://apps.apple.com/ru/app/uzum-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD/id1640483056">
+              <img style="width: 54px;" src="./public/iphone.png" alt="">
+              AppStore
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uz.uzum.app">
+              <img style="width: 36px;" src="./public/google.png" alt="">
+              Google Play
+            </a>
+          </div>
+          <h3 style="margin-top: 70px;">Uzum в соцсетях</h3>
+          <div class="social_medias">
+            <a href="https://www.instagram.com/uzum.market/">
+              <img src="./public/Instagram_icon.png.webp" alt="">
+            </a>
+            <a href="https://t.me/uzum_market">
+              <img style="width: 36px;" src="./public/tg.png" alt="">
+            </a>
+            <a href="https://www.youtube.com/channel/UCY3nNF2MUDKHrELA6LzbnHA">
+              <img style="width: 34px;" src="./public/youtube.svg" alt="">
+            </a>
+            <a href="https://www.facebook.com/uzummarket">
+              <img src="./public/facebook.webp" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="extra_links">
+        <div class="policies">
+          <a href="https://legal.uzum.uz/privacy-policy.html">Соглашение о конфиденциальности</a>
+          <a href="/ru/termsofuse">Пользовательское соглашение</a>
+        </div>
+        <span>«2024© ООО «UZUM MARKET». ИНН 309376127. Все права защищены»</span>
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>

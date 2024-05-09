@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../media/media.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div class="main">
+        <div class="small">
+            <div class="fir">
+                <div class="download">
+                    <img src="../../public/logo_uzum.png" alt="">
+                    <h1>UZUM MARKET</h1>
+                </div>
+                <button>
+                    <a href="https://apps.apple.com/us/app/uzum-market-my-app-for-shop/id1640483056?mt=8">Скачать</a>
+                  </button>            </div>
+            <div class="sec">
+                <form name="small_ver">
+                    <input type="text" placeholder="Искать товары и категории">
+                    <div class="search_icon">
+                        <img src="../../public/search.svg" alt="">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="tovar_page">
+            <div class="start">
+                <div class="first">
+
+                    <div class="sliders">
+                        <div thumbsSlider="" class="swiper mySwiper">
+                            <div class="swiper-wrapper"></div>
+                        </div>
+
+                        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;"
+                            class="swiper mySwiper2">
+                            <div draggable="true" class="swiper-wrapper"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+
+                    <div class="description">
+                        <h1>Описание</h1>
+                        <h2></h2>
+                    </div>
+                </div>
+
+                <div class="information">
+                    <div class="rate_add">
+                        <span>
+                            <img src="../../public/star.png" alt="">
+                            <p>3.9</p>
+                        </span>
+                        <div class="add_to_lov">
+                            <img src="../../public/heart.svg" alt="">
+                            <p>В желания</p>
+                        </div>
+                    </div>
+                    <h1 class="name"></h1>
+                    <div class="dop">
+                        <p>Продавец:</p>
+                        <a href="">Неизвестен</a>
+                    </div>
+                    <div style="border-bottom: 1px solid rgba(0, 0, 0, 0.192);" class="dop">
+                        <p>Доставка:</p>
+                        <span>1 день, бесплатно</span>
+                    </div>
+                    <div style="padding-top: 20px;" class="dop color">
+                        <p>Цвет:
+                            <span style="color: black; font-weight: 600; padding-left: 10px;"></span>
+                        </p>
+                    </div>
+                    <div class="colours"></div>
+                    <div class="dop">
+                        <p>Количество:</p>
+                    </div>
+                    <div class="how_much">
+                        <button class="minus">-</button>
+                        <p>0</p>
+                        <button class="plus">+</button>
+                    </div>
+                    <div class="dop">
+                        <p>Цена:</p>
+                    </div>
+                    <div class="price">
+                        <p></p>
+                        <span></span>
+                    </div>
+                    <button class="add_to_bag">Добавить в корзину</button>
+                    <div class="extra">
+                        <div style="border-bottom: 1px solid #8b8e995d;" class="item">
+                            <p>Быстрая доставка от 1 дня</p>
+                            <span>В пункты выдачи Uzum или курьером</span>
+                        </div>
+                        <div style="border-bottom: 1px solid #8b8e995d;" class="item">
+                            <p>Безопасная оплата удобным способом</p>
+                            <span>Оплачивайте картой, наличными или в рассрочку</span>
+                        </div>
+                        <div class="item">
+                            <p>Простой и быстрый возврат</p>
+                            <span>Примем товары в течение 10 дней и сразу вернём деньги</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prod_tovari relatable_prods">
+                <h1>Похожие товары</h1>
+                <div class="tovari relatable"></div>
+                <button class="more">Показать ещё</button>
+            </div>
+        </div>
+    </div>
+
+    <dialog data-modal>
+        <div class="wrap">
+            <div class="close">
+                <img src="../../public/close.png" alt="">
+            </div>
+            <form name="ph_num">
+                <h1>Введите свое имя</h1>
+                <p>Войти в аккаунт, либо зарегистрироваться</p>
+                <div class="number">
+                    <input type="text" placeholder="Ваше имя" required>
+                </div>
+                <button>Войти</button>
+            </form>
+            <div class="author">
+                <p>Авторизуясь, вы соглашаетесь <a href="https://legal.uzum.uz/privacy-policy.html">c политикой
+                        обработки
+                        персональных данных</a></p>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog data-modal class="categ">
+        <h1>Категории товаров</h1>
+        <ul class="category_ul"></ul>
+        <div class="cancel">Отмена</div>
+    </dialog>
+
+    <div class="finded_pr">
+        <h1>Поиск</h1>
+        <ul class="finded_ul"></ul>
+    </div>
+
+    <script type="module" src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>
