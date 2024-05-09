@@ -67,32 +67,28 @@ form.onsubmit = (e) => {
     console.log(user);
 
     if (name && surname) {
-        getData('/users?surname=' + surname)
+        getData('/users?name=' + name)
             .then(res => {
                 const [res_user] = res.data
 
                 if (res_user) {
-                    alert('user found!');
+                    alert('user finded!');
                     localStorage.setItem("user", JSON.stringify(res.data))
-                    Header(main, dialog)
-                    delete_item('/favourites')
-                    delete_item('/bag')
+                    location.assign('/')
                     return
                 } else {
                     postData('/users', user)
-                        .then(res => {
-                            if (res.status === 200 || res.status === 201) {
-                                localStorage.setItem("user", JSON.stringify(res.data))
-                                Header(main, dialog)
-                                delete_item('/favourites')
-                                delete_item('/bag')
-                                location.assign('/')
-                            }
-                            dialog.close()
-                        })
+                    .then(res => {
+                        if (res.status === 200 || res.status === 201) {
+                            localStorage.setItem("user", JSON.stringify(res.data))
+                            location.assign('/')
+                        }
+                    })
                 }
+                dialog.close()
 
                 delete_item('/favourites')
+                delete_item('/bag')
             })
     }
 }
