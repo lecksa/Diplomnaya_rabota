@@ -56,8 +56,8 @@ export function Header(place, sign_in) {
     sign.classList.add('item_prof', 'sign')
     img_1.src = "../../public/profile.svg"
     img_1.style.width = "24px"
-    if (user_loc) {
-        h2_1.innerHTML = user_loc[0].name
+    if (user_loc !== undefined) {
+        h2_1.innerHTML = user_loc.name
     } else {
         h2_1.innerHTML = "Войти"
     }

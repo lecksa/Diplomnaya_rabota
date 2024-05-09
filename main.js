@@ -82,24 +82,32 @@ form.onsubmit = (e) => {
     console.log(user);
 
     if (name && surname) {
-        getData('/users?name=' + name)
+        getData('/users?surname=' + surname)
             .then(res => {
                 const [res_user] = res.data
 
                 if (res_user) {
-                    alert('user finded!');
+                    alert('user found!');
                     localStorage.setItem("user", JSON.stringify(res.data))
+                    Header(main, dialog)
+                    delete_item('/favourites')
+                    delete_item('/bag')
                     return
                 } else {
                     postData('/users', user)
                         .then(res => {
                             if (res.status === 200 || res.status === 201) {
                                 localStorage.setItem("user", JSON.stringify(res.data))
+                                Header(main, dialog)
+                                delete_item('/favourites')
+                                delete_item('/bag')
                                 location.assign('/')
                             }
                             dialog.close()
                         })
                 }
+
+                delete_item('/favourites')
             })
     }
 }

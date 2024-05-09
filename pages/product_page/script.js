@@ -164,6 +164,50 @@ getData('/goods/' + product_id)
         }
     })
 
+const form = document.forms.ph_num
+
+form.onsubmit = (e) => {
+    e.preventDefault()
+
+    const user = {}
+
+    const fm = new FormData(e.target)
+
+    fm.forEach((val, key) => user[key] = val)
+
+    const { name, surname } = user
+    console.log(user);
+
+    if (name && surname) {
+        getData('/users?surname=' + surname)
+            .then(res => {
+                const [res_user] = res.data
+
+                if (res_user) {
+                    alert('user found!');
+                    localStorage.setItem("user", JSON.stringify(res.data))
+                    Header(main, dialog)
+                    delete_item('/favourites')
+                    delete_item('/bag')
+                    return
+                } else {
+                    postData('/users', user)
+                        .then(res => {
+                            if (res.status === 200 || res.status === 201) {
+                                localStorage.setItem("user", JSON.stringify(res.data))
+                                Header(main, dialog)
+                                delete_item('/favourites')
+                                delete_item('/bag')
+                                location.assign('/')
+                            }
+                            dialog.close()
+                        })
+                }
+
+                delete_item('/favourites')
+            })
+    }
+}
 
 var swiper = new Swiper(".mySwiper", {
     // loop: true,
